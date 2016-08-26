@@ -1,0 +1,32 @@
+title: "Default Configuration"
+type: "object"
+properties:
+  required: [
+    "lightNumber"
+  ]
+  options:
+    type: "object"
+    lightNumber:
+      title: "Light Number"
+      type: "integer"
+      default: 0
+      minimum: 0
+  desiredState:
+    type: "object"
+    properties:
+      color:
+        title: "Color"
+        type: "string"
+      on:
+        title: "Light On"
+        type: "boolean"
+      transitiontime:
+        title: "Transition Time (in milliseconds)"
+        type: "integer"
+        minimum: 0
+      alert:
+        title: "Alert Effect"
+        type: "string"
+      effect:
+        title: "Dynamic Effect"
+        type: "string"

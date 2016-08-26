@@ -1,0 +1,4 @@
+angular: [
+  { key: "options.ipAddress" }
+  { key: "options.apiUsername" }
+]

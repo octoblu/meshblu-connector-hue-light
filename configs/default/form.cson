@@ -1,0 +1,38 @@
+angular: [
+  { key: "lightNumber" }
+  { key: "color" }
+  { key: "on" }
+  { key: "transitiontime" }
+  {
+    key: "alert"
+    type: "select"
+    titleMap: [
+      {
+        value: "none"
+        name: "None"
+      }
+      {
+        value: "select"
+        name: "Flash Once (select)"
+      }
+      {
+        value: "lselect"
+        name: "Flash Repeatedly (lselect)"
+      }
+    ]
+  }
+  {
+    key: "effect"
+    type: "select"
+    titleMap: [
+      {
+        value: "none"
+        name: "None"
+      }
+      {
+        value: "colorloop"
+        name: "Color Loop"
+      }
+    ]
+  }
+]
