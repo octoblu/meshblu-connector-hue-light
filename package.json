@@ -1,6 +1,6 @@
 {
   "name": "meshblu-connector-hue-light",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Meshblu Connector ",
   "homepage": "https://github.com/octoblu/meshblu-connector-hue-light",
   "bugs": "https://github.com/octoblu/meshblu-connector-hue-light/issues",
