@@ -1,11 +1,15 @@
 {EventEmitter}  = require 'events'
-debug           = require('debug')('meshblu-connector-hue:index')
+debug           = require('debug')('meshblu-connector-hue-light:index')
 HueManager      = require './hue-manager'
 _               = require 'lodash'
 
 class Connector extends EventEmitter
   constructor: ->
     @hue = new HueManager
+    @hue.on 'update', (data) =>
+      @emit 'update', data
+    @hue.on 'change:username', ({apikey}) =>
+      @emit 'update', {apikey}
 
   isOnline: (callback) =>
     callback null, running: true
@@ -16,14 +20,12 @@ class Connector extends EventEmitter
 
   onConfig: (device={}, callback=->) =>
     { options, apikey, desiredState } = device
-    debug 'on config', @options
+    debug 'on config', options
     @hue.close (error) =>
       return callback error if error?
-      @hue.setup {@options, apikey, @desiredState}, (error) =>
+      @hue.connect {options, apikey, desiredState}, (error) =>
         return callback error if error?
         @connected = true
-        @hue.on 'change:username', ({apikey}) =>
-          @emit 'update', {apikey}
         callback()
 
   start: (device, callback) =>

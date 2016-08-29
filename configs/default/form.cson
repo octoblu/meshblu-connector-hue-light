@@ -1,10 +1,10 @@
 angular: [
-  { key: "lightNumber" }
-  { key: "color" }
-  { key: "on" }
-  { key: "transitiontime" }
+  { key: "options.lightNumber" }
+  { key: "desiredState.color" }
+  { key: "desiredState.on" }
+  { key: "desiredState.transitiontime" }
   {
-    key: "alert"
+    key: "desiredState.alert"
     type: "select"
     titleMap: [
       {
@@ -22,7 +22,7 @@ angular: [
     ]
   }
   {
-    key: "effect"
+    key: "desiredState.effect"
     type: "select"
     titleMap: [
       {

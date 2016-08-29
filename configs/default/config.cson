@@ -5,12 +5,14 @@ properties:
     "lightNumber"
   ]
   options:
+    title: "Options"
     type: "object"
-    lightNumber:
-      title: "Light Number"
-      type: "integer"
-      default: 0
-      minimum: 0
+    properties:
+      lightNumber:
+        title: "Light Number"
+        type: "integer"
+        default: 0
+        minimum: 0
   desiredState:
     type: "object"
     properties:
