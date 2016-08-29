@@ -22,6 +22,7 @@ properties:
         type: "string"
         default: "newdeveloper"
   desiredState:
+    title: "Desired State"
     type: "object"
     properties:
       color:

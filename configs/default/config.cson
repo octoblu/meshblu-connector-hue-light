@@ -14,6 +14,7 @@ properties:
         default: 0
         minimum: 0
   desiredState:
+    title: "Desired State"
     type: "object"
     properties:
       color:
