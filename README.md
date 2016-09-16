@@ -1,11 +1,14 @@
 # meshblu-connector-hue-light
 
+[![Build Status](https://travis-ci.org/octoblu/meshblu-connector-hue-light.svg?branch=master)](https://travis-ci.org/octoblu/meshblu-connector-hue-light)
+[![Test Coverage](https://codecov.io/gh/octoblu/meshblu-connector-hue-light/branch/master/graph/badge.svg)](https://codecov.io/gh/octoblu/meshblu-connector-hue-light)
 [![Dependency status](http://img.shields.io/david/octoblu/meshblu-connector-hue-light.svg?style=flat)](https://david-dm.org/octoblu/meshblu-connector-hue-light)
 [![devDependency Status](http://img.shields.io/david/dev/octoblu/meshblu-connector-hue-light.svg?style=flat)](https://david-dm.org/octoblu/meshblu-connector-hue-light#info=devDependencies)
-[![Build Status](http://img.shields.io/travis/octoblu/meshblu-connector-hue-light.svg?style=flat&branch=master)](https://travis-ci.org/octoblu/meshblu-connector-hue-light)
 [![Slack Status](http://community-slack.octoblu.com/badge.svg)](http://community-slack.octoblu.com)
 
 [![NPM](https://nodei.co/npm/meshblu-connector-hue-light.svg?style=flat)](https://npmjs.org/package/meshblu-connector-hue-light)
+[![Dependency status](http://img.shields.io/david/octoblu/meshblu-connector-hue-light.svg?style=flat)](https://david-dm.org/octoblu/meshblu-connector-hue-light)
+
 
 ## Installing
 
