@@ -3,6 +3,7 @@ HueManager = require '../src/hue-manager'
 describe 'HueManager', ->
   beforeEach ->
     @sut = new HueManager
+    @sut._updateState = sinon.stub().yields null
 
   afterEach (done) ->
     @sut.close done
@@ -52,6 +53,7 @@ describe 'HueManager', ->
     beforeEach (done) ->
       options =
         lightNumber: 4
+
       @sut.connect {options}, (error) =>
         {@hue} = @sut
         done error

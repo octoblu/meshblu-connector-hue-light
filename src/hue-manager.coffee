@@ -12,7 +12,7 @@ class HueManager extends EventEmitter
     @options ?= {}
     {apiUsername, ipAddress, @lightNumber} = @options
     {username} = @apikey
-    apiUsername ?= 'newdeveloper'
+    apiUsername = 'newdeveloper' if _.isEmpty apiUsername
     @apikey.devicetype = apiUsername
     @hue = new HueUtil apiUsername, ipAddress, username, @_onUsernameChange
     @stateInterval = setInterval @_updateState, 30000
@@ -28,9 +28,12 @@ class HueManager extends EventEmitter
     @apikey.username = username
     @_emit 'change:username', {@apikey}
 
-  _updateState: (update={}, callback=_.noop) =>
+  _updateState: (update={}, callback) =>
+    callback ?= (error) =>
+      @emit 'error', error if error?
+
     @getLight (error, light) =>
-      return callback() if error?
+      return callback error if error?
       deviceUpdate = _.pick light, ['color', 'alert', 'effect', 'on']
       update = _.merge update, deviceUpdate
       @_emit 'update', update
@@ -41,14 +44,8 @@ class HueManager extends EventEmitter
       return callback error if error?
       { bri, sat, hue, alert, effect } = light.state
 
-      bri = (bri / 254) * 100
-      hue = (hue / 254) * 100
-      sat = (sat / 254) * 100
-
-      color = "hsl(" + hue + "%," + sat + "%," + bri + "%)"
-
       return callback null, {
-        color: tinycolor(color).toHex8String()
+        color: @hue.toTinycolor({ bri, sat, hue }).toHex8String()
         alert: alert
         effect: effect
         on: light.state.on
