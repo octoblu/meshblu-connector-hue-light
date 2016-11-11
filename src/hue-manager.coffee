@@ -16,7 +16,9 @@ class HueManager extends EventEmitter
     @apikey.devicetype = apiUsername
     @hue = new HueUtil apiUsername, ipAddress, username, @_onUsernameChange
     @stateInterval = setInterval @_updateState, 30000
-    @changeLight desiredState, callback
+    @hue.verify (error) =>
+      return callback error if error?
+      @changeLight desiredState, callback
 
   close: (callback) =>
     clearInterval @stateInterval
