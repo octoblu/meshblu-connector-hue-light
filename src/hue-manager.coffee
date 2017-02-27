@@ -1,8 +1,6 @@
 _              = require 'lodash'
 HueUtil        = require 'hue-util'
 {EventEmitter} = require 'events'
-tinycolor      = require 'tinycolor2'
-debug          = require('debug')('meshblu-connector-hue-light:hue-manager')
 _              = require 'lodash'
 
 class HueManager extends EventEmitter
@@ -10,11 +8,13 @@ class HueManager extends EventEmitter
     @_emit = _.throttle @emit, 500, {leading: true, trailing: false}
     @apikey ?= {}
     @options ?= {}
-    {apiUsername, ipAddress, @lightNumber} = @options
+
+    {ipAddress, @lightNumber} = @options
     {username} = @apikey
-    apiUsername = 'newdeveloper' if _.isEmpty apiUsername
-    @apikey.devicetype = apiUsername
-    @hue = new HueUtil apiUsername, ipAddress, username, @_onUsernameChange
+
+    @apikey.devicetype = devicetype = 'octoblu-hue-light'
+    @hue = new HueUtil devicetype, ipAddress, username, @_onUsernameChange
+
     @stateInterval = setInterval @_updateState, 30000
     @verify (error) =>
       return callback error if error?

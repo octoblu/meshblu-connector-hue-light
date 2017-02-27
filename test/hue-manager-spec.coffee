@@ -1,3 +1,6 @@
+{afterEach, beforeEach, context, describe, it} = global
+{expect}   = require 'chai'
+sinon      = require 'sinon'
 HueManager = require '../src/hue-manager'
 
 describe 'HueManager', ->
@@ -18,7 +21,7 @@ describe 'HueManager', ->
 
     it 'should update apikey', ->
       apikey =
-        devicetype: 'newdeveloper'
+        devicetype: 'octoblu-hue-light'
       expect(@sut.apikey).to.deep.equal apikey
 
   context 'with an active client', ->
