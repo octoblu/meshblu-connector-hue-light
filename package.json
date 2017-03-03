@@ -1,6 +1,6 @@
 {
   "name": "meshblu-connector-hue-light",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "Meshblu Connector ",
   "homepage": "https://github.com/octoblu/meshblu-connector-hue-light",
   "bugs": "https://github.com/octoblu/meshblu-connector-hue-light/issues",
@@ -38,7 +38,7 @@
     "fs-cson": "^0.3.2",
     "hue-util": "^2.2.2",
     "meshblu-config": "^6.4.3",
-    "meshblu-connector-runner": "^10.3.1",
+    "meshblu-connector-runner": "^10.3.2",
     "meshblu-connector-schema-generator": "^2.1.0",
     "tinycolor2": "^1.4.1"
   },
