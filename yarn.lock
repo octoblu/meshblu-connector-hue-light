@@ -830,9 +830,9 @@ http-signature@~1.1.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-hue-util@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/hue-util/-/hue-util-2.2.1.tgz#774fda5698c456dee3ad5b460e4d717beff76dde"
+hue-util@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/hue-util/-/hue-util-2.2.2.tgz#72d8a2eadf58201986c8540703a5a96d9be08f98"
   dependencies:
     coffee-script "^1.9.3"
     debug "^2.2.0"
@@ -1187,11 +1187,11 @@ lodash@^3.9.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.13.1, lodash@^4.14.1, lodash@^4.2.0, lodash@^4.6.1:
+lodash@^4.13.1, lodash@^4.2.0, lodash@^4.6.1:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
-lodash@^4.14.0, lodash@^4.16.4, lodash@^4.17.2, lodash@^4.17.4:
+lodash@^4.14.0, lodash@^4.14.1, lodash@^4.16.4, lodash@^4.17.2, lodash@^4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -1244,9 +1244,9 @@ meshblu-config@^6.4.3:
     lodash "^3.9.1"
     meshblu-encryption "^2.0.1"
 
-meshblu-connector-runner@^10.3.0:
-  version "10.3.0"
-  resolved "https://registry.yarnpkg.com/meshblu-connector-runner/-/meshblu-connector-runner-10.3.0.tgz#52569063bbb0e4df82d9ab9b2223f654914bd60a"
+meshblu-connector-runner@^10.3.1:
+  version "10.3.1"
+  resolved "https://registry.yarnpkg.com/meshblu-connector-runner/-/meshblu-connector-runner-10.3.1.tgz#686a5ba7b0869cb9798815b05578b501a64913e6"
   dependencies:
     async "^2.1.5"
     bunyan "^1.8.5"
@@ -1258,7 +1258,7 @@ meshblu-connector-runner@^10.3.0:
     is-running "^2.0.0"
     json-stable-stringify "^1.0.1"
     lodash "^4.17.4"
-    meshblu "^2.2.9"
+    meshblu "^2.3.0"
     meshblu-config "^6.4.3"
     octoblu-raven "^5.0.0"
 
@@ -1282,9 +1282,9 @@ meshblu-encryption@^2.0.1:
     lodash "^4.6.1"
     node-rsa "^0.3.2"
 
-meshblu@^2.2.9:
-  version "2.2.9"
-  resolved "https://registry.yarnpkg.com/meshblu/-/meshblu-2.2.9.tgz#36e709aea334d8ba758ed4f59985da81a0fd0869"
+meshblu@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/meshblu/-/meshblu-2.3.0.tgz#0c706f8650dc532d5e9b0cd4fb7bdac16d4172c8"
   dependencies:
     backo "^1.1.0"
     coffee-script "^1.10.0"
