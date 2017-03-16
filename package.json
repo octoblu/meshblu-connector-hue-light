@@ -1,6 +1,6 @@
 {
   "name": "meshblu-connector-hue-light",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "description": "Meshblu Connector ",
   "homepage": "https://github.com/octoblu/meshblu-connector-hue-light",
   "bugs": "https://github.com/octoblu/meshblu-connector-hue-light/issues",
@@ -29,16 +29,16 @@
     "mocha-osx-reporter": "^0.1.2",
     "nyc": "^10.1.2",
     "segfault-handler": "^1.0.0",
-    "sinon": "^1.17.7",
+    "sinon": "^2.0.0",
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
     "coffee-script": "^1.12.4",
-    "debug": "^2.6.2",
+    "debug": "^2.6.3",
     "fs-cson": "^0.3.2",
     "hue-util": "^2.2.2",
-    "meshblu-config": "^6.4.3",
-    "meshblu-connector-runner": "^10.5.1",
+    "meshblu-config": "^7.0.0",
+    "meshblu-connector-runner": "^10.5.2",
     "meshblu-connector-schema-generator": "^2.1.0",
     "tinycolor2": "^1.4.1"
   },
