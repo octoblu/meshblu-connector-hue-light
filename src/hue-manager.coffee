@@ -15,6 +15,7 @@ class HueManager extends EventEmitter
     @apikey.devicetype = devicetype = 'octoblu-hue-light'
     @hue = new HueUtil devicetype, ipAddress, username, @_onUsernameChange
 
+    clearInterval @stateInterval if @stateInterval?
     @stateInterval = setInterval @_updateState, 30000
     @verify (error) =>
       return callback error if error?
@@ -40,6 +41,8 @@ class HueManager extends EventEmitter
     @getLight (error, light) =>
       return callback error if error?
       deviceUpdate = _.pick light, ['color', 'alert', 'effect', 'on']
+      return callback() if _.isEqual deviceUpdate, @previousDeviceUpdate
+      @previousDeviceUpdate = deviceUpdate
       update = _.merge update, deviceUpdate
       @_emit 'update', update
       callback()
