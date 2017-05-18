@@ -3,7 +3,6 @@ type: "object"
 properties:
   required: [
     "lightNumber"
-    "apiUsername"
   ]
   options:
     title: "Options"
@@ -17,10 +16,15 @@ properties:
       ipAddress:
         title: "Bridge IP Address"
         type: "string"
-      apiUsername:
+  apikey:
+    properties:
+      username:
         title: "API Username"
         type: "string"
         default: "newdeveloper"
+    required: [
+      "username"
+    ]
   desiredState:
     title: "Desired State"
     type: "object"
