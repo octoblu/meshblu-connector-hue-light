@@ -17,6 +17,8 @@ properties:
         title: "Bridge IP Address"
         type: "string"
   apikey:
+    title: "API Key"
+    type: "object"
     properties:
       username:
         title: "API Username"
