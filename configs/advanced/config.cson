@@ -1,9 +1,6 @@
 title: "Advanced Configuration"
 type: "object"
 properties:
-  required: [
-    "lightNumber"
-  ]
   options:
     title: "Options"
     type: "object"
@@ -16,6 +13,9 @@ properties:
       ipAddress:
         title: "Bridge IP Address"
         type: "string"
+    required: [
+      "lightNumber"
+    ]
   apikey:
     title: "API Key"
     type: "object"

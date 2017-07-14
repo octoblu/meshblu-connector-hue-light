@@ -1,9 +1,6 @@
 title: "Default Configuration"
 type: "object"
 properties:
-  required: [
-    "lightNumber"
-  ]
   options:
     title: "Options"
     type: "object"
@@ -13,6 +10,9 @@ properties:
         type: "integer"
         default: 0
         minimum: 0
+    required: [
+      "lightNumber"
+    ]
   desiredState:
     title: "Desired State"
     type: "object"
